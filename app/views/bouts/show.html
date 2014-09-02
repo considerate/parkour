@@ -1,0 +1,44 @@
+<div>
+	<div class="general info">
+		<h1>Algoritmer, datastrukturer</h1>
+		<h2>Labb 1</h2>
+	</div>
+	<div class="row">
+		<div class="col-xs-6">
+			<button ng-click="makeDriver(creator)" class="btn btn-primary" >Gör {{creator.name}} till förare</button>
+			<h3>{{creator.name}}</h3>
+			<div class="current">
+				<div ng-show="isDriver(creator)">
+					<h3>Har varit förare i&nbsp;
+					{{creatorTimer.duration}}
+					</h3>
+					<button ng-click="creatorTimer.resume()" class="btn btn-primary" ng-disabled="creatorTimer.running">Start</button>
+					<button ng-click="creatorTimer.stop()" class="btn btn-primary" ng-disabled="!creatorTimer.running">Pausa</button>
+				</div>
+			</div>
+			<div class="log">
+				<div ng-repeat="log in isUser(logs, creator)">
+					{{minuteFormat(log.time)}}
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-6">
+			<button ng-click="makeDriver(partner)" class="btn btn-primary">Gör {{partner.name}} till förare</button>
+			<h3>{{partner.name}}</h3>
+			<div class="current">
+				<div ng-show="isDriver(partner)">
+					<h3>Har varit förare i&nbsp;
+					{{partnerTimer.duration}}
+					</h3>
+					<button ng-click="partnerTimer.resume()" class="btn btn-primary" ng-disabled="partnerTimer.running">Start</button>
+					<button ng-click="partnerTimer.stop()" class="btn btn-primary" ng-disabled="!partnerTimer.running">Pausa</button>
+				</div>
+			</div>
+			<div class="log">
+				<div ng-repeat="log in isUser(logs, partner)">
+					{{minuteFormat(log.time)}}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
