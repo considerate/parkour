@@ -13,5 +13,5 @@ angular.module('ngtimeApp').controller('SuccessCtrl', function($location, $windo
 	var token = params.token;
 
 	$window.sessionStorage.setItem('login_token', token);
-	$window.location.replace('/')
+	$window.location.href.replace('/')
 });
