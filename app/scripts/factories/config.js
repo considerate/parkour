@@ -9,8 +9,8 @@ angular.module('ngtimeApp').factory('config', [function() {
 
 	var clientInfo = {
 		protocol: 'http',
-		host: 'localhost',
-		port: '9000',		
+		host: 'parkour.csc.kth.se',
+		port: '80',		
 	};
 
 	clientInfo.base = clientInfo.protocol+'://'+clientInfo.host+':'+clientInfo.port;
