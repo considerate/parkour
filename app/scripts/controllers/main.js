@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * @ngdoc function
  * @name ngtimeApp.controller:MainCtrl
@@ -8,6 +6,7 @@
  * Controller of the ngtimeApp
  */
 angular.module('ngtimeApp').controller('MainCtrl',['$scope','boutsRequest', function($scope, boutsRequest) {
+    'use strict';
 
 	boutsRequest.list();
 
@@ -17,5 +16,4 @@ angular.module('ngtimeApp').controller('MainCtrl',['$scope','boutsRequest', func
 	}).then(function () {
 		
 	});
-
 }]);
